@@ -2,6 +2,8 @@
 @import 'abstracts/palette';
 @import 'abstracts/mixins';
 
+@import 'responsive/main-responsive';
+
 
 html {
 
@@ -14,9 +16,58 @@ body {
     @include pancke-stack();
 }
 
-header {
-    border: $border;
+.wrapper {
+    background: linear-gradient(344deg, rgba(253,252,249,1) 21%, rgba(237,206,244,1) 100%);
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1124px;
+        margin: 0 auto;
+        padding: 1rem;
+        border: $border;
+
+            .navbar {
+
+                .menu {
+                    display: flex;
+                    padding-left: 0;
+
+                    &__item {
+                        padding: 1.5rem 0;
+                    
+                    }
+        
+                    &__link {
+                        padding: 0 $pd-md;
+                        font-size: 1.7rem;
+                        font-weight: $w-sm;
+                        color: $c-primary;
+
+                        &--btn {
+                            
+                            @include base-button($c-btn, $c-btnF,  $w-bg);
+
+                            span {
+                                @include base-text(1.7rem, start, $w-sm, normal, $c-btnF);
+                            }
+        
+                        }
+                    }
+                }
+
+                .icon-menu {
+                    display: none;
+                }
+
+            }
+    }
+    
 }
+
+
 
 main {
     border: $border;
@@ -27,3 +78,5 @@ footer {
     border: $border;
 
 }
+
+@include menu( 43em );

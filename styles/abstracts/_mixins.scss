@@ -48,27 +48,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
     padding-left: 0;
+    padding-top: 10rem;
+    background: linear-gradient(344deg, rgba(253,252,249,1) 21%, rgba(237,206,244,1) 100%);
     opacity: 0;
     visibility: hidden;
-    background-color: #0277bd;
-    box-shadow: -3px 0 10px 0 rgba(#000, 0.2);
 }
 
-@mixin  base-menu-responsive() {
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 0;
-    opacity: 1;
-    visibility: visible;
-    border-radius: 0;
-    box-shadow: none;
-    background-color: transparent;
-    transform: translateX(0);
-}
+
 
 @mixin hamburger-icon($width, $height, $bg) {
     

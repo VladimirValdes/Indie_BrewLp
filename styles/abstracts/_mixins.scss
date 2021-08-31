@@ -117,9 +117,13 @@
 
 //======FORMS====//
 
-@mixin  base-button($bk, $color, $w) {
+@mixin  base-button($bk, $color, $w, $m-w) {
 
-    padding: 2rem;
+    width: 100%;
+    min-width: 125px;
+    max-width: $m-w;
+    padding: 16px;
+    font-size: 1.7rem;
     font-weight: $w;
     color: $color;
     background-color: $bk;

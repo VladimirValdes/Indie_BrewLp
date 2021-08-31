@@ -48,7 +48,11 @@ body {
   color: #000000;
 }
 .wrapper header .header-wrapper .navbar .menu__link--btn {
-  padding: 2rem;
+  width: 100%;
+  min-width: 125px;
+  max-width: 230px;
+  padding: 16px;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #ffffff;
   background-color: #664efc;
@@ -77,21 +81,20 @@ body {
   max-width: 1124px;
   margin: 0 auto;
   padding: 1.5rem;
-  border: 1px solid green;
 }
-.wrapper .hero__content {
+.wrapper .hero-content {
   grid-area: hero-content;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 562px;
-  border: 1px solid red;
 }
-.wrapper .hero__content .hero__btn {
+.wrapper .hero-content__btn {
   width: 100%;
-  max-width: 300px;
+  min-width: 125px;
+  max-width: 230px;
+  padding: 16px;
   font-size: 1.7rem;
-  padding: 2rem;
   font-weight: 500;
   color: #ffffff;
   background-color: #664efc;
@@ -100,18 +103,36 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
 }
-.wrapper .hero__content .hero__btn span {
+.wrapper .hero-content__btn span {
   font-size: 1.7rem;
   text-align: start;
   font-weight: 400;
   line-height: normal;
   color: #e1dddd;
 }
+.wrapper .hero-content__img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 2.5rem;
+}
 .wrapper .hero__img {
   grid-area: hero-img;
+  display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 562px;
-  border: 1px solid red;
+  margin: 5rem auto;
+  margin-bottom: 0;
+}
+.wrapper .hero__img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 footer {
@@ -119,7 +140,7 @@ footer {
 }
 
 body .title {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
   text-align: start;
   font-weight: 700;
   line-height: normal;

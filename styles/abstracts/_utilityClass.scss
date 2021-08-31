@@ -2,7 +2,7 @@
 body {
 
     .title {
-        @include base-text(3.5rem, $w-bg, $c-primary );
+        @include base-text(5.5rem, $w-bg, $c-primary );
         margin-bottom: 0;
     }
 

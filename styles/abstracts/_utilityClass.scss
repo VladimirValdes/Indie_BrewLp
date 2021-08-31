@@ -1,0 +1,21 @@
+
+body {
+
+    .title {
+        @include base-text(3.5rem, $w-bg, $c-primary );
+        margin-bottom: 0;
+    }
+
+    .info {
+
+        @include base-text(1.7rem, $w-sm, $c-secondary, start , 2.5rem );
+
+        span {
+
+            @include base-text(1.7rem, $w-bg, $c-links );
+
+        }
+
+    }
+}
+

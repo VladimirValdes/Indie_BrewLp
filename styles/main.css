@@ -59,10 +59,10 @@ body {
 }
 .wrapper header .header-wrapper .navbar .menu__link--btn span {
   font-size: 1.7rem;
-  text-align: start;
-  font-weight: 400;
-  line-height: normal;
-  color: #ffffff;
+  text-align: normal;
+  font-weight: start;
+  line-height: #ffffff;
+  color: 400;
 }
 .wrapper header .header-wrapper .navbar .icon-menu {
   display: none;
@@ -76,13 +76,36 @@ body {
   width: 100%;
   max-width: 1124px;
   margin: 0 auto;
+  padding: 1.5rem;
   border: 1px solid green;
 }
 .wrapper .hero__content {
   grid-area: hero-content;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 562px;
   border: 1px solid red;
+}
+.wrapper .hero__content .hero__btn {
+  width: 100%;
+  max-width: 300px;
+  font-size: 1.7rem;
+  padding: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #664efc;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.wrapper .hero__content .hero__btn span {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: normal;
+  color: #e1dddd;
 }
 .wrapper .hero__img {
   grid-area: hero-img;
@@ -93,6 +116,29 @@ body {
 
 footer {
   border: 1px solid red;
+}
+
+body .title {
+  font-size: 3.5rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  margin-bottom: 0;
+}
+body .info {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #6b6b6b;
+}
+body .info span {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #4c42fb;
 }
 
 @media (max-width: 43em) {

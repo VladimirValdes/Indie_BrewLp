@@ -181,10 +181,69 @@ main {
 }
 
 footer {
-    border: $border;
+   
     background-color: #fdfcf9;
-    padding: 1.5rem;
 
+    .footer-wrapper {
+
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1124px;
+        margin: 0 auto;
+        padding: 1.5rem;
+
+
+        .section-footer {
+            flex-basis: 325px;
+        }
+    
+        .section-links {
+            flex-basis: 275px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+    
+            .list {
+                margin: 0;
+                padding-left: 0;
+                padding-right: 2.5rem;
+    
+                &__title {
+        
+                    @include base-text(2rem, $w-bg, $c-primary );
+        
+                }
+    
+                &-opt {
+                    margin: 0;
+                    margin-top: 1rem;
+                    padding: 0;
+    
+                    &__item {
+                        padding-bottom: 1rem
+                    }
+            
+                    &__link {
+            
+                        @include base-text(1.7rem, $w-sm, $c-secondary);
+            
+                    }
+                }
+        
+               
+            }
+        
+        }
+    }
+  
+
+    
+
+    
+
+    
 }
 
 

@@ -101,6 +101,15 @@
                 }
             }
         }
+
+
+
+        footer {
+
+            .footer-wrapper {
+                justify-content: space-between;
+            }
+        }
     }
 }
 
@@ -158,6 +167,18 @@
             }
 
            
+        }
+
+        footer {
+
+            .footer-wrapper {
+                align-items: center;
+
+                .section-links {
+                    flex-basis: auto;
+
+                }
+            }
         }
         
     }

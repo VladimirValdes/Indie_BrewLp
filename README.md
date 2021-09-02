@@ -11,7 +11,7 @@
     ✅ HTML
     ✅ SCSS
          - Flexbox
-         - Grid Css
+         - Grid 
     ✅ JavaScript
     ✅ BEM (block__element--modifier)
     ✅ Mobile-first workflow

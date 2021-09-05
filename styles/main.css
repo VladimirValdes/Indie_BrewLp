@@ -243,6 +243,10 @@ body .info {
   line-height: 2.5rem;
   color: #6b6b6b;
 }
+body .info--color {
+  margin: 0;
+  color: black;
+}
 body .info span {
   font-size: 1.7rem;
   text-align: start;

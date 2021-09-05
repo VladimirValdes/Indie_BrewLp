@@ -1,0 +1,138 @@
+
+@import '../abstracts/palette';
+@import '../abstracts/mixins';
+
+// @import 'responsive/main-responsive';
+
+
+html {
+    
+    font-family: $font-primary;
+    font-size: 62.5%;
+    
+}
+
+body {
+    background-color: #f9f0f9;
+}
+
+header {
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.1);
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1124px;
+        margin: 0 auto;
+
+        &__back {
+            padding: 5px;
+            background-color: #fdf8fc;
+            border: 1px solid #b0b0b0;
+            border-radius: 5px;
+            cursor: pointer
+        }
+    }
+}
+
+
+main {
+    @include split-screen("form", "advantages", center);
+
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    .section-advantages {
+        grid-area: advantages;
+        border: 1px solid red;
+
+        .advantage {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 2rem;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+        }
+    }
+
+    .section-form {
+        grid-area: form;
+        border: 1px solid green;
+
+
+        
+            .form {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+                width: 225px;
+        
+                &__label {
+                    margin-top: 0.5rem;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                }
+        
+                &__input {
+                    // margin: 0.5rem 0 1rem 0;
+                    // padding: 1rem;
+                    // font-size: 1.2rem;
+                    // font-weight: 500;
+                    // border: 1px solid $color-input;
+                    // border-radius: 5px;
+                    // outline: none;
+        
+                    // box-shadow: -36px 2px 79px -18px rgba(0,0,0,0.1);
+        
+                    @include base-input();
+                }
+        
+                &__content {
+        
+                    display: flex;
+                    align-items: flex-start;
+                    margin-top: 0.5rem;
+        
+                }
+        
+        
+                &__info {
+        
+                    margin-left: 0.5rem;
+                    margin-top: 0;
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    color: $c-primary;
+                    letter-spacing: 0.5px;
+        
+                    a {
+                        font-weight: 600;
+                        color: $c-links;
+                    }
+                }
+        
+                &__btn {
+
+                    @include base-button($c-btn, $c-btnF,  $w-bg, 230px);
+                   
+        
+                }
+            }
+        }
+}
+
+
+
+@import '../abstracts/utilityClass';

@@ -1,0 +1,162 @@
+/*========================
+        LAYOUTS
+========================*/
+/*========================
+        COMPONENTS
+========================*/
+html {
+  font-family: "DM Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9f0f9;
+}
+
+header {
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0px 2px 8px 1px rgba(0, 0, 0, 0.1);
+}
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1124px;
+  margin: 0 auto;
+}
+header .menu__back {
+  padding: 5px;
+  background-color: #fdf8fc;
+  border: 1px solid #b0b0b0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: "advantages" "form";
+  justify-items: center;
+  width: 100%;
+  max-width: 1124px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+main .section-advantages {
+  grid-area: advantages;
+  border: 1px solid red;
+}
+main .section-advantages .advantage {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+main .section-advantages .icon {
+  font-size: 2.5rem;
+}
+main .section-form {
+  grid-area: form;
+  border: 1px solid green;
+}
+main .section-form .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 225px;
+}
+main .section-form .form__label {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+main .section-form .form__input {
+  padding: 2rem;
+  border: 1px solid #E2E8F0;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: -36px 2px 79px -18px rgba(0, 0, 0, 0.1);
+}
+main .section-form .form__input:placeholder-shown {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #5D5D5E;
+}
+main .section-form .form__content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+main .section-form .form__info {
+  margin-left: 0.5rem;
+  margin-top: 0;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.5px;
+}
+main .section-form .form__info a {
+  font-weight: 600;
+  color: #4c42fb;
+}
+main .section-form .form__btn {
+  width: 100%;
+  min-width: 125px;
+  max-width: 230px;
+  padding: 16px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #664efc;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+body .title {
+  font-size: 5.5rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  margin-bottom: 0;
+}
+body .title-sub {
+  font-size: 3.5rem;
+}
+body .title-ft {
+  font-size: 2.5rem;
+}
+body .info {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #6b6b6b;
+}
+body .info--color {
+  margin: 0;
+  color: black;
+}
+body .info span {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #4c42fb;
+}
+body .link {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #664efc;
+}
+
+/*# sourceMappingURL=singUp.css.map */

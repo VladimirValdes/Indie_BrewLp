@@ -33,9 +33,14 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
-            max-width: 1124px;
-            margin: 0 auto;
+
+            @include base-layoutW();
+
+
+            .icon-menu {
+                display: none;
+            }
+            
             
             .navbar {
                 
@@ -58,16 +63,18 @@ body {
                             @include base-button($c-btn, $c-btnF,  $w-bg, 230px);
                             
                             span {
-                                @include base-text(1.7rem, start, $w-sm, normal, $c-btnF);
+                                @include base-text(1.7rem, $w-sm, #e1dddd );
                             }
                             
+                        }
+
+                        &:hover {
+                            color: $c-btn;
                         }
                     }
                 }
                 
-                .icon-menu {
-                    display: none;
-                }
+               
                 
             }
             
@@ -79,10 +86,10 @@ body {
     .hero {
         @include split-screen("hero-content", "hero-img", center);
         row-gap: 2.5rem;
-        width: 100%;
-        max-width: 1124px;
-        margin: 0 auto;
         padding: 1.5rem;
+
+        @include base-layoutW();
+
         
         &-content {
             grid-area: hero-content;
@@ -93,8 +100,8 @@ body {
 
             &__btn {
                
-                @include base-button($c-btn, $c-btnF, $w-md, 230px);
-
+                @include base-button($c-btn, $c-btnF, $w-bg, 230px);
+                text-align: center;
                 span {
                     @include base-text(1.7rem, $w-sm, #e1dddd );
                 }
@@ -137,9 +144,8 @@ body {
 
 
 main {
-    width: 100%;
-    max-width: 1124px;
-    margin: 0 auto;
+
+    @include base-layoutW();
     padding: 1.5rem;
 
     .section-benefits {
@@ -149,13 +155,11 @@ main {
         margin: 0 auto;
         padding: 1.5rem 0;
 
-        // border: 1px solid green;
 
         .benefit {
             grid-area: benefit;
             width: 100%;
             max-width: 562px;
-            // border: 1px solid purple;
         }
 
         .benefit-img {
@@ -166,7 +170,6 @@ main {
             max-width: 562px;
             margin: 0 auto;
             margin-bottom: 0;
-            // border: 1px solid pink;
 
             img {
                 width: 100%;
@@ -189,10 +192,9 @@ footer {
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-        width: 100%;
-        max-width: 1124px;
-        margin: 0 auto;
         padding: 1.5rem;
+
+       @include base-layoutW();
 
 
         .section-footer {
@@ -228,6 +230,12 @@ footer {
                     &__link {
             
                         @include base-text(1.7rem, $w-sm, $c-secondary);
+
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $c-btn;
+                        }
             
                     }
                 }

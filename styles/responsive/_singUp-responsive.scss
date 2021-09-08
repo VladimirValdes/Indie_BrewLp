@@ -1,0 +1,46 @@
+
+@mixin tablet($breakpoint-tablet) {
+    
+    @media (min-width: $breakpoint-tablet) {
+
+        header {
+
+            .menu {
+
+
+                &__content {
+
+                    .menu__text {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+      
+       
+    }
+}
+
+
+
+@mixin desktop($breakpoint-tablet) {
+    
+    @media (min-width: $breakpoint-tablet) {
+
+        main {
+            @include split-screen-desk(advantages, form, center);
+            column-gap: 0.5rem;
+
+            .section-advantages {
+                align-self: center;
+                max-width: 450px;
+
+                .title {
+                    font-size: 3.5rem;
+                }
+            }
+
+           
+        }
+    }
+}

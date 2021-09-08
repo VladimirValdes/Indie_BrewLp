@@ -117,7 +117,27 @@
 
 //======FORMS====//
 
+@mixin  button-hambuger() {
+
+    position: absolute;
+    right: 1rem;
+    z-index: 10;
+   
+   
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 65px;
+       padding: 16px;
+       background-color: transparent;
+       border: none;
+   
+       cursor: pointer
+   }
+
 @mixin  base-button($bk, $color, $w, $m-w) {
+
+    @content;
 
     width: 100%;
     min-width: 125px;
@@ -127,24 +147,34 @@
     font-weight: $w;
     color: $color;
     background-color: $bk;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     letter-spacing: 1px;
 
-    cursor: pointer
+    cursor: pointer;
+
+    &:hover {
+        color: $c-btn;
+        background-color: transparent;
+        border: 1px solid $c-btn;
+
+        span {
+            color: $c-btn;
+        }
+    }
 }
 
 @mixin  base-input() {
     @content;
 
-    padding: 2rem;
+    padding: 1.5rem;
     border: 1px solid #E2E8F0;
     outline: none;
     border-radius: 5px;
     box-shadow: -36px 2px 79px -18px rgba(0,0,0,0.1);
 
     &:placeholder-shown {
-        font-weight: 500;
+        font-weight: $w-sm;
         font-size: 1.5rem;
         color: #5D5D5E;
     }
@@ -160,4 +190,12 @@
     font-weight: $fw;
     line-height: $lh;
     color: $c;
+}
+
+
+@mixin base-layoutW() {
+    width: 100%;
+    max-width: 1124px;
+    margin: 0 auto;
+            
 }

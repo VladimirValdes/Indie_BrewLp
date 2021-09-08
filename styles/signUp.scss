@@ -1,8 +1,8 @@
+@import 'abstracts/palette';
+@import 'abstracts/mixins';
 
-@import '../abstracts/palette';
-@import '../abstracts/mixins';
 
-// @import 'responsive/main-responsive';
+@import 'responsive/singUp-responsive';
 
 
 html {
@@ -30,28 +30,45 @@ header {
         max-width: 1124px;
         margin: 0 auto;
 
-        &__back {
-            padding: 5px;
-            background-color: #fdf8fc;
-            border: 1px solid #b0b0b0;
-            border-radius: 5px;
-            cursor: pointer
+        &__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .menu__back {
+                padding: 5px;
+                background-color: #fdf8fc;
+                border: 1px solid #b0b0b0;
+                border-radius: 5px;
+                cursor: pointer
+            }
+
+            .menu__text {
+                display: none;
+                margin-left: 1rem;
+                font-size: 1.5rem;
+                font-weight: $w-md;
+                
+            }
         }
+
+       
     }
 }
 
 
 main {
     @include split-screen("form", "advantages", center);
-
+    row-gap: 2.5rem;
     width: 100%;
-    max-width: 1124px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 1.5rem;
 
     .section-advantages {
         grid-area: advantages;
-        border: 1px solid red;
+        width: 100%;
+        max-width: 600px;
 
         .advantage {
             display: flex;
@@ -67,35 +84,35 @@ main {
     }
 
     .section-form {
+
         grid-area: form;
-        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        padding: 1.5rem;
+        border-radius: 10px;
+        background-color: white;
 
 
+        
         
             .form {
                 display: flex;
                 flex-direction: column;
-                margin-top: 1rem;
-                width: 225px;
+                width: 100%;
+                max-width: 400px;
         
                 &__label {
-                    margin-top: 0.5rem;
-                    font-size: 1.3rem;
-                    font-weight: 500;
+                    margin: 1rem 0;
+                    font-size: 1.5rem;
+                    font-weight: $w-bg;
                     letter-spacing: 0.5px;
                 }
         
                 &__input {
-                    // margin: 0.5rem 0 1rem 0;
-                    // padding: 1rem;
-                    // font-size: 1.2rem;
-                    // font-weight: 500;
-                    // border: 1px solid $color-input;
-                    // border-radius: 5px;
-                    // outline: none;
-        
-                    // box-shadow: -36px 2px 79px -18px rgba(0,0,0,0.1);
-        
+                
                     @include base-input();
                 }
         
@@ -103,7 +120,7 @@ main {
         
                     display: flex;
                     align-items: flex-start;
-                    margin-top: 0.5rem;
+                    margin-top: 1.5rem;
         
                 }
         
@@ -113,19 +130,20 @@ main {
                     margin-left: 0.5rem;
                     margin-top: 0;
                     font-size: 1.7rem;
-                    font-weight: 400;
+                    font-weight: $w-sm;
                     color: $c-primary;
                     letter-spacing: 0.5px;
         
                     a {
-                        font-weight: 600;
+                        font-weight: 500;
                         color: $c-links;
+                        text-decoration-line: underline;
                     }
                 }
         
                 &__btn {
 
-                    @include base-button($c-btn, $c-btnF,  $w-bg, 230px);
+                    @include base-button($c-btn, $c-btnF,  $w-bg, 100%);
                    
         
                 }
@@ -134,5 +152,8 @@ main {
 }
 
 
+@import 'abstracts/utilityClass';
 
-@import '../abstracts/utilityClass';
+@include tablet(30em);
+
+@include desktop(62em);

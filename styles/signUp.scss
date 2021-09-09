@@ -1,5 +1,7 @@
 @import 'abstracts/palette';
 @import 'abstracts/mixins';
+@import 'abstracts/utilityClass';
+
 
 
 @import 'responsive/singUp-responsive';
@@ -14,6 +16,8 @@ html {
 
 body {
     background-color: #f9f0f9;
+    @include utilityClasess();
+
 }
 
 header {
@@ -152,7 +156,6 @@ main {
 }
 
 
-@import 'abstracts/utilityClass';
 
 @include tablet(30em);
 

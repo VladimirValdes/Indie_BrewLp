@@ -1,6 +1,8 @@
 
-body {
 
+@mixin  utilityClasess() {
+    
+    
     .title {
         @include base-text(5.5rem, $w-bg, $c-primary );
         margin-bottom: 0;
@@ -42,4 +44,7 @@ body {
 
     }
 }
+
+
+
 

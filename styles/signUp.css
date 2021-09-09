@@ -12,6 +12,46 @@ html {
 body {
   background-color: #f9f0f9;
 }
+body .title {
+  font-size: 5.5rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  margin-bottom: 0;
+}
+body .title-sub {
+  font-size: 3.5rem;
+}
+body .title-ft {
+  font-size: 2.5rem;
+}
+body .info {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: #6b6b6b;
+}
+body .info--color {
+  margin: 0;
+  margin-left: 1rem;
+  color: black;
+}
+body .info span {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #4c42fb;
+}
+body .link {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  line-height: normal;
+  color: #664efc;
+}
 
 header {
   width: 100%;
@@ -145,47 +185,6 @@ main .section-form .form__btn:hover {
   border: 1px solid #664efc;
 }
 main .section-form .form__btn:hover span {
-  color: #664efc;
-}
-
-body .title {
-  font-size: 5.5rem;
-  text-align: start;
-  font-weight: 700;
-  line-height: normal;
-  color: #000000;
-  margin-bottom: 0;
-}
-body .title-sub {
-  font-size: 3.5rem;
-}
-body .title-ft {
-  font-size: 2.5rem;
-}
-body .info {
-  font-size: 1.7rem;
-  text-align: start;
-  font-weight: 400;
-  line-height: 2.5rem;
-  color: #6b6b6b;
-}
-body .info--color {
-  margin: 0;
-  margin-left: 1rem;
-  color: black;
-}
-body .info span {
-  font-size: 1.7rem;
-  text-align: start;
-  font-weight: 700;
-  line-height: normal;
-  color: #4c42fb;
-}
-body .link {
-  font-size: 1.7rem;
-  text-align: start;
-  font-weight: 700;
-  line-height: normal;
   color: #664efc;
 }
 

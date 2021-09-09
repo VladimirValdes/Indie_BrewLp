@@ -1,6 +1,8 @@
 
 @import 'abstracts/palette';
 @import 'abstracts/mixins';
+@import 'abstracts/utilityClass';
+
 
 @import 'responsive/main-responsive';
 
@@ -15,6 +17,7 @@ html {
 
 body {
     @include pancke-stack();
+    @include utilityClasess();
 }
 
 .wrapper {
@@ -255,7 +258,6 @@ footer {
 }
 
 
-@import 'abstracts/utilityClass';
 
 @include menu( 43em );
 @include tablet( 43em );

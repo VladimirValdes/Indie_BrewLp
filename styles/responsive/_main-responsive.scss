@@ -3,75 +3,7 @@
     
     @media (max-width: $breakpoint-desktop) {
 
-        .wrapper {
-
-            header {
-                .header-wrapper {
-
-
-                    .brand-container {
-                        z-index: 20;
-                    }
-    
-                    
-                    .navbar {
-    
-                        .menu {
-    
-                            @include base-menu(); 
-                            margin: 0;
-    
-                            &__item--space {
-                                margin-top: 1rem;
-                            }
-    
-                            &__link {
-    
-                                font-size: 2.5rem;
-        
-                                &--btn {
-                                    font-size: 1.7rem;
-                                }
-                            }
-    
-                            &--active {
-                                opacity: 1;
-                                visibility: visible;
-                                transform: translateX(0);
-                                transition: 0.3s ease-out;
-                            }
-                            
-                        }
-    
-                       
-                    }
-    
-                    .icon-menu {
-
-                        @include button-hambuger();
-                    
-                        // position: absolute;
-                        // right: 1rem;
-                        // z-index: 10;
-                        // display: flex;
-                        // flex-direction: column;
-                        // width: 40px;
-            
-                        // cursor: pointer;
-            
-                        &__bar {
-                            @include hamburger-icon(35px, 3px, #333);
-            
-                            &--close {
-                                @include close-icon();
-                            }
-                        }
-                    }
-                }
-            }
-
-            
-        }
+      
     }
 }
 
@@ -81,37 +13,9 @@
     
     @media (min-width: $breakpoint-tablet) {
 
-        main {
-            .section-benefits {
-                @include split-screen-desk(benefit, benefit-img, flex-start);
-                column-gap: 0.5rem;
-                padding-bottom: 0;
-
-                &--layout {
-                    grid-template-areas: 
-                    "benefit-img benefit-img benefit benefit";
-                    margin-top: 4.5rem;
-                }
-
-                .benefit-img {
-                    align-self: center;
-                    align-items: center;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
 
 
-
-        footer {
-
-            .footer-wrapper {
-                justify-content: space-between;
-            }
-        }
+     
     }
 }
 
@@ -120,68 +24,7 @@
     
     @media (min-width: $breakpoint-desktop) {
 
-        .wrapper {
-
-            height: 100vh;
-
-            .hero {
-
-                @include split-screen-desk(hero-content, hero-img, flex-start);
-                column-gap: 0.5rem;
-
-                &-content {
-                    justify-content: flex-end;
-                }
-
-                &__img {
-                    align-self: center;
-                    align-items: center;
-                }
-            }
-        }
-
-        main {
-
-            .section-benefits {
-                height: 60vh;
-
-                .benefit {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-                
-                .benefit-img--direct {
-                    justify-content: flex-end;
-
-                    img {
-                        width: 65%;
-                    }
-                }
-
-                &--layout{
-
-                    height: 100vh;
-                    
-                   
-                }
-
-            }
-
-           
-        }
-
-        footer {
-
-            .footer-wrapper {
-                align-items: center;
-
-                .section-links {
-                    flex-basis: auto;
-
-                }
-            }
-        }
+     
         
     }
 }

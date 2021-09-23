@@ -15,8 +15,8 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-template-areas:
-        $area2
-        $area1;
+        $area1
+        $area2;
     justify-items: $j-items;
 }
 
@@ -142,26 +142,27 @@
     width: 100%;
     min-width: 125px;
     max-width: $m-w;
-    padding: 16px;
-    font-size: 1.7rem;
+    padding: 16px 8px;
+    font-size: 1.5rem;
     font-weight: $w;
     color: $color;
     background-color: $bk;
     border: 1px solid transparent;
     border-radius: 5px;
     letter-spacing: 1px;
+    text-align: center;
 
     cursor: pointer;
 
-    &:hover {
-        color: $c-btn;
-        background-color: transparent;
-        border: 1px solid $c-btn;
+    // &:hover {
+    //     color: $c-btn;
+    //     background-color: transparent;
+    //     border: 1px solid $c-btn;
 
-        span {
-            color: $c-btn;
-        }
-    }
+    //     span {
+    //         color: $c-btn;
+    //     }
+    // }
 }
 
 @mixin  base-input() {

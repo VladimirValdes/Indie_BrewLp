@@ -1,264 +1,84 @@
 
-@import 'abstracts/palette';
-@import 'abstracts/mixins';
-@import 'abstracts/utilityClass';
+@use 'abstracts/palette' as p;
+@use 'abstracts/mixins' as m;
 
 
-@import 'responsive/main-responsive';
+@use 'responsive/main-responsive' as r;
 
 
 
 html {
     
-    font-family: $font-primary;
+    font-family: p.$font-primary;
     font-size: 62.5%;
     
 }
 
 body {
-    @include pancke-stack();
-    @include utilityClasess();
+    @include m.pancke-stack();
+    background-color: #fff;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(344deg, rgba(253,252,249,1) 21%, rgba(237,206,244,1) 100%);
+.header {
+   @include m.split-screen( 'main', 'img', center);
+
+   .hero-content {
+       grid-area: main;
+       padding: 1.5rem;
+       border: 1px solid red;
+
+       &__title {
+           @include m.base-text(3.5rem, p.$w-xbg, p.$c-terteary );
     
-    header {
-        
-        width: 100%;
-        padding: 1.5rem;
-        box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.1);
-        
-        .header-wrapper {
-            
+       }
+
+       &__desc {
+           @include m.base-text(1.5rem, p.$w-sm, p.$c-primary);
+
+       }
+
+       .btns {
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-start;
+           align-items: center;
+
+           &__main {
+               @include m.base-button(p.$c-btn, p.$c-btnF, p.$w-bg, 190px);
+           }
+
+           &__secondary{
+               @include m.base-button(transparent, p.$c-primary, p.$w-bg, 130px);
+           }
+       }
+
+       .footer {
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
 
-            @include base-layoutW();
+            &__text {
+                @include m.base-text(1.5rem, p.$w-sm, p.$c-primary);
 
-
-            .icon-menu {
-                display: none;
-            }
-            
-            
-            .navbar {
-                
-                .menu {
-                    display: flex;
-                    padding-left: 0;
-                    
-                    &__item {
-                        padding: 1.5rem 0;
-                        
-                    }
-        
-                    &__link {
-                        padding: 0 $pd-md;
-                        font-size: 1.7rem;
-                        font-weight: $w-sm;
-                        color: $c-primary;
-
-                        &--btn {
-                            @include base-button($c-btn, $c-btnF,  $w-bg, 230px);
-                            
-                            span {
-                                @include base-text(1.7rem, $w-sm, #e1dddd );
-                            }
-                            
-                        }
-
-                        &:hover {
-                            color: $c-btn;
-                        }
-                    }
-                }
-                
-               
-                
-            }
-            
-        }
-        
-        
-    }
-
-    .hero {
-        @include split-screen("hero-content", "hero-img", center);
-        row-gap: 2.5rem;
-        padding: 1.5rem;
-
-        @include base-layoutW();
-
-        
-        &-content {
-            grid-area: hero-content;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 562px;
-
-            &__btn {
-               
-                @include base-button($c-btn, $c-btnF, $w-bg, 230px);
-                text-align: center;
-                span {
-                    @include base-text(1.7rem, $w-sm, #e1dddd );
+                &--link {
+                    font-weight: p.$w-bg;
+                    text-decoration: underline;
                 }
             }
+       }
+   }
 
-            &__img {
+   .hero-img {
+       grid-area: img;
+       background-color: #46ccde;
+       border: 1px solid blue;
 
-                    width: 100%;
-                    max-width: 230px;
-                    height: auto;
-                    object-fit: cover;
-                    object-position: center;
-                    margin-top: 2.5rem;
-            }
-        }
-        
-        &__img {
-            grid-area: hero-img;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 562px;
-            margin: 5rem auto;
-            margin-bottom: 0;
-    
-            img {
-                width: 100%;
-                max-width: 90%;
-                height: auto;
-                object-fit: contain;
-                object-position: center;
-            }
-            
-            
-        }
-    }
-    
+   }
 }
 
 
 
-main {
-
-    @include base-layoutW();
-    padding: 1.5rem;
-
-    .section-benefits {
-        @include split-screen("benefit", "benefit-img", center);
-        row-gap: 2.5rem;
-        width: 100%;
-        margin: 0 auto;
-        padding: 1.5rem 0;
-
-
-        .benefit {
-            grid-area: benefit;
-            width: 100%;
-            max-width: 562px;
-        }
-
-        .benefit-img {
-            grid-area: benefit-img;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 562px;
-            margin: 0 auto;
-            margin-bottom: 0;
-
-            img {
-                width: 100%;
-                max-width: 90%;
-                height: auto;
-                object-fit: contain;
-                object-position: center;
-            }
-        }
-
-    }
-}
-
-footer {
-   
-    background-color: #fdfcf9;
-
-    .footer-wrapper {
-
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        padding: 1.5rem;
-
-       @include base-layoutW();
-
-
-        .section-footer {
-            flex-basis: 325px;
-        }
-    
-        .section-links {
-            flex-basis: 275px;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-    
-            .list {
-                margin: 0;
-                padding-left: 0;
-                padding-right: 2.5rem;
-    
-                &__title {
-        
-                    @include base-text(2rem, $w-bg, $c-primary );
-        
-                }
-    
-                &-opt {
-                    margin: 0;
-                    margin-top: 1rem;
-                    padding: 0;
-    
-                    &__item {
-                        padding-bottom: 1rem
-                    }
-            
-                    &__link {
-            
-                        @include base-text(1.7rem, $w-sm, $c-secondary);
-
-                        cursor: pointer;
-
-                        &:hover {
-                            color: $c-btn;
-                        }
-            
-                    }
-                }
-        
-               
-            }
-        
-        }
-    }
-  
-
-    
-
-    
-
-    
-}
-
-
-
-@include menu( 43em );
-@include tablet( 43em );
-@include desktop( 62em );
+@include r.menu( 43em );
+@include r.tablet( 43em );
+@include r.desktop( 62em );

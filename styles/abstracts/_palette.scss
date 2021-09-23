@@ -1,27 +1,39 @@
 // Colors
 
-$c-primary: #000000;
-$c-secondary:#6b6b6b;
+$c-primary: #536374;
 
-$c-bk-Sign: #f9eff9;
+$c-secondary:#005661;
+$c-terteary:#1d1b67;
+
+// Another color blue
+// #5c82cc
+
+//bk-primary
+// #ffffff
+// #46ccde --celeste
+// #cdf9ff --verde claro
+
 
 $c-btnF: #ffffff;
-$c-btn: #664efc;
+$c-btn: #1d1b67;
 
-$c-links:#4c42fb;
+$c-links:#4c5d6e;
 
 
-// Gradients color
-// #efd3f2
-// #fdfcf9
+
 
 
 // fonts
-$font-primary: 'DM Sans', sans-serif;
+$font-primary: 'Inter', sans-serif;
 
-$w-sm:400;
+$w-xsm:300;
+$w-sm: 400;
+$w-xmd:400;
 $w-md:500;
+$w-xbg:600;
 $w-bg:700;
+$w-sbg:800;
+
 
 
 

@@ -9,7 +9,7 @@
 
    ✅ View the optimal layout for the site depending on their device's screen size.
    
-### 🌐 Links  Solution: [here](https://snippet-lp.vercel.app/)
+### 🌐 Links  Solution: [here](https://vladimirvaldes.github.io/Indie_BrewLp/)
    
 
 
